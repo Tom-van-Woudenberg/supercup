@@ -23,22 +23,38 @@ def extract_veld(veld_value):
     veld_str = str(veld_value).strip()
     
     # Look for specific veld patterns - order matters, check more specific patterns first
-    if 'LVG-B 2x' in veld_str:
-        return 'LVG-B 2x'
-    elif 'VG-B 2x' in veld_str:
-        return 'VG-B 2x'
-    elif 'LVE 2x' in veld_str:
-        return 'LVE 2x'
-    elif 'LVG 2x' in veld_str:
-        return 'LVG 2x'
-    elif 'LVB 2x' in veld_str:
-        return 'LVB 2x'
-    elif 'VE 2x' in veld_str:
-        return 'VE 2x'
-    elif 'VG 2x' in veld_str:
-        return 'VG 2x'
-    elif 'VB 2x' in veld_str:
-        return 'VB 2x'
+    if 'LVG-B' in veld_str:
+        return 'LVG-B'
+    elif 'VG-B' in veld_str:
+        return 'VG-B'
+    elif 'LVE' in veld_str:
+        return 'LVE'
+    elif 'LVG' in veld_str:
+        return 'LVG'
+    elif 'LVB' in veld_str:
+        return 'LVB'
+    elif 'VE' in veld_str:
+        return 'VE'
+    elif 'VG' in veld_str:
+        return 'VG'
+    elif 'VB' in veld_str:
+        return 'VB'
+    elif 'MVG-B' in veld_str:
+        return 'MVG-B'
+    elif 'MG-B' in veld_str:
+        return 'MG-B'
+    elif 'MVE' in veld_str:
+        return 'MVE'
+    elif 'MVG' in veld_str:
+        return 'MVG'
+    elif 'MVB' in veld_str:
+        return 'MVB'
+    elif 'ME' in veld_str:
+        return 'ME'
+    elif 'MG' in veld_str:
+        return 'MG'
+    elif 'MB' in veld_str:
+        return 'MB'
     else:
         return veld_str if veld_str not in ['', 'nan', 'None'] else 'Other'
 
